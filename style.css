@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+
+html, body {
+    margin: 0;
+    min-height: 100%;
+    height: auto;
+}
+
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: hsl(185, 75%, 39%);
+}
+
+.background-main {
+    position: absolute;
+    z-index: -3;
+
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.pattern-bottom {
+    aspect-ratio: 1;
+    height: 140%;
+    position: absolute;
+    bottom: -90%;
+    right: -12%;
+    overflow: hidden;
+}
+
+.pattern-top {
+    aspect-ratio: 1;
+    height: 140%;
+    position: absolute;
+    top: -75%;
+    left: -17.5%;
+    overflow: hidden;
+}
+
+.main-card {
+    display: flex;
+    flex-direction: column;
+
+    height: 450px;
+    width: 450px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    border-radius: 15px;
+    box-shadow: 0 0 5px hsl(227, 10%, 46%);
+}
+
+#backgroundp1 {
+    position: absolute;
+    z-index: -1;
+    height: 180px;
+    width: 450px;
+    background-image: url("images/bg-pattern-card.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#backgroundp2 {
+    position: absolute;
+    z-index: -2;
+    height: 360px;
+    width: 450px;
+    background-color: white;
+
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+}
+
+.following-stats {
+    display: flex;
+    background-color: white;
+    height: 70px;
+
+    justify-content: space-between;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    padding-top: 20px;
+    padding-left: 75px;
+    padding-right: 75px;
+
+    text-align: center;
+    border-top: hsla(0, 0%, 59%, 0.4) 1px solid;
+}
+
+.main-card img {
+    height: 120px;
+    width: 120px;
+
+    position: relative;
+
+    z-index: 5;
+    border-radius: 50%;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border: white solid 5px;
+}
+
+.bundle-name-and-age {
+    display: flex;
+    position: relative;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.bundle-name-and-age p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.age {
+    color: hsl(0, 0%, 59%);
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 19px;
+}
+
+.name {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.location {
+    position: relative;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: hsl(0, 0%, 59%);
+    margin-top: 5px;
+}
+
+.bundle-name-and-age {
+    display: flex;
+}
+
+.big {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.small {
+    color: hsl(0, 0%, 59%);
+    font-size: 12px;
+}
+
+.stat-single p {
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 700px) {
+
+    .main-card {
+        aspect-ratio: 1;
+        width: 95%;
+    }
+
+    .pattern-bottom {
+        position: absolute;
+        overflow: hidden;
+        width: 90%;
+        height: 90vw;
+        right: -50%;
+        bottom: -25%;
+    }
+
+    .pattern-top {
+        position: absolute;
+        overflow: hidden;
+        width: 90%;
+        height: 90vw;
+        top: -25%;
+        left: -55%;
+    }
+
+    #backgroundp1, #backgroundp2 {
+        width: 95%;
+    }
+
+    .bundle-name-and-age {
+        min-width: 50px;
+        padding-left: 20vw;
+        padding-right: 20vw;
+    }
+
+    .following-stats {
+        padding-left: 10vw;
+        padding-right: 10vw;
+        width: auto;
+        min-width: 150px;
+    }
+
+}
+
+@media screen and (max-width: 350px) {
+
+    .pattern-bottom {
+        position: absolute;
+        overflow: hidden;
+        width: 120%;
+        height: 120vw;
+        right: -60%;
+        bottom: -25%;
+    }
+
+    .pattern-top {
+        position: absolute;
+        overflow: hidden;
+        width: 120%;
+        height: 120vw;
+        top: -25%;
+        left: -65%;
+    }
+
+    .following-stats {
+        padding-left: 0;
+        padding-right: 0;
+        min-width: 120px;
+    }
+}
